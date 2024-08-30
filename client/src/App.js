@@ -6,6 +6,7 @@ import EmployeeTrainingStatus from './components/EmployeeTrainingStatus';
 import CertificationResults from './components/CertificationResults';
 import EmployeeListing from './components/EmployeeListing';
 import UpcomingReviews from './components/UpcomingReviews';
+import LCSClassroom from './components/LCSClassroom';
 import logo from './LCS_Logo_FullColor_Web.png'; // Import the logo image
 import './App.css'; // Ensure the CSS file is correctly imported
 
@@ -36,6 +37,9 @@ function App() {
             <li>
               <Link to="/upcoming-reviews">Upcoming Reviews</Link>
             </li>
+            <li>
+              <Link to="/lcs-classroom">LCS Classroom</Link>
+            </li>
           </ul>
         </nav>
         <Routes>
@@ -45,6 +49,7 @@ function App() {
           <Route path="/certification-results" element={<CertificationResults />} />
           <Route path="/employee-listing" element={<EmployeeListing />} />
           <Route path="/upcoming-reviews" element={<UpcomingReviews />} />
+          <Route path="/lcs-classroom" element={<LCSClassroom />} />
         </Routes>
       </div>
     </Router>

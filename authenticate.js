@@ -64,4 +64,13 @@ setInterval(async () => {
       console.error('Error refreshing token:', error.message);
     }
   }, 14 * 60 * 1000); // Refresh every 14 minutes
-  
+  async function getToken() {
+    if (!apiToken || Date.now() >= tokenExpiryTime) {
+      console.log('Token expired or not found. Re-authenticating...');
+      await authenticate();
+    } else {
+      console.log('Token is still valid, but forcing refresh to check validity:', apiToken);
+      await authenticate(); // Force re-authentication even if token is valid
+    }
+    return apiToken;
+  }

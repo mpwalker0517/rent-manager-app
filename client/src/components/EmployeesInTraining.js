@@ -24,7 +24,7 @@ const EmployeesInTraining = () => {
 
   return (
     <div className="employees-in-training">
-      <h2>Employees in General Training</h2>
+      <h2>Employees in Training</h2>
       {loading && <p>Loading...</p>}
       {error && <p>{error}</p>}
       {!loading && !error && (
